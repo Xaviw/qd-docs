@@ -3,14 +3,16 @@ import { defineConfig } from 'vitepress'
 import AutoNav from 'vite-plugin-vitepress-auto-nav'
 import Unocss from 'unocss/vite'
 
-// https://vitepress.dev/reference/site-config
+// https://vitepress.dev/zh/reference/site-config
 export default defineConfig({
   title: 'Docs',
-  description: 'some description',
+  description: '技术文档',
   lang: 'zh-cn',
   srcDir: 'src',
   vite: {
     plugins: [
+      // 根据目录结构自动生成 nav 与 sidebar
+      // https://github.com/Xaviw/vite-plugin-vitepress-auto-nav
       AutoNav(),
       Unocss(),
     ],

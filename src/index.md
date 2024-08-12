@@ -1,11 +1,10 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
+# https://vitepress.dev/zh/reference/default-theme-home-page
 layout: home
 
 hero:
-  name: "QD Docs"
-  text: "A VitePress Site"
-  tagline: My great project tagline
+  name: "Docs"
+  text: "技术文档"
   actions:
     - theme: brand
       text: Markdown Examples
@@ -13,13 +12,4 @@ hero:
     - theme: alt
       text: API Examples
       link: /api-examples
-
-features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
-

@@ -6,6 +6,7 @@ import '@unocss/reset/tailwind.css'
 import 'virtual:uno.css'
 import './style.css'
 
+// https://vitepress.dev/zh/guide/custom-theme
 export default {
   extends: DefaultTheme,
   Layout: () => {
