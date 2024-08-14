@@ -1,14 +1,17 @@
 {
   "type": "module",
-  "packageManager": "pnpm@9.6.0",
+  "packageManager": "pnpm@9.7.0",
+  "engines": {
+    "node": ">=18.3"
+  },
   "scripts": {
     "dev": "vitepress dev",
     "build": "vitepress build",
     "preview": "vitepress preview"
   },
   "dependencies": {
-    "@unhead/vue": "^1.9.16",
     "@unocss/reset": "^0.61.5",
+    "@vueuse/core": "^10.11.1",
     "markdown-it": "^14.1.0",
     "vue": "^3.4.34"
   },

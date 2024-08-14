@@ -7,9 +7,6 @@ hero:
   text: "技术文档"
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: 前端文档
+      link: /前端文档/playground
 ---
