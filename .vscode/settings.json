@@ -116,5 +116,8 @@
   },
   "[postcss]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  }
+  },
+
+  // 使用工作区安装的 typescript 版本
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

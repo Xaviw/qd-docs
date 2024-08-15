@@ -62,7 +62,7 @@ export default defineConfig({
       level: 'deep',
     },
     editLink: {
-      pattern: 'xxx/edit/master/:path',
+      pattern: 'https://gitee.com/xaviw/qd-docs/edit/master/src/:path',
       text: '修改本文',
     },
   },

@@ -8,5 +8,5 @@ hero:
   actions:
     - theme: brand
       text: 前端文档
-      link: /前端文档/playground
+      link: /前端文档/统一开发环境
 ---
