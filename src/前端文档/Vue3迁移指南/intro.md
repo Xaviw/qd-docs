@@ -1,9 +1,10 @@
-原子化CSS+组件库协同
+原子化CSS
 Vite
 TypeScript
 JSX、TSX
 Pinia
 DevTools
+开发者工具-自定义格式化
 
 ## 创建及运行
 

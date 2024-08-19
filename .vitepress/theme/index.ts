@@ -2,6 +2,7 @@
 import { h } from 'vue'
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
+import IframeContainer from '../components/IframeContainer.vue'
 import 'virtual:uno.css'
 import './style.css'
 
@@ -13,5 +14,8 @@ export default {
       // class: 'prose prose-sky text-lg text-left m-auto dark:prose-invert',
     }, {
     })
+  },
+  enhanceApp({ app }) {
+    app.component('IframeContainer', IframeContainer)
   },
 } satisfies Theme
