@@ -17,7 +17,7 @@ const props = withDefaults(
 
 const page = ref<HTMLDivElement | null>(null)
 
-const { toggle } = useFullscreen(page)
+const { isFullscreen, toggle } = useFullscreen(page)
 
 function openInBlank() {
   window.open(props.src, '_blank')
@@ -38,7 +38,7 @@ function openInBlank() {
       </summary>
 
       <div ref="page">
-        <iframe :src="src" width="100%" :height class="border-none" />
+        <iframe :src="src" width="100%" :height="isFullscreen ? '100%' : height" class="border-none" />
       </div>
     </details>
   </div>
