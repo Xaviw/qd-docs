@@ -16,11 +16,11 @@
     "lucide-vue-next": "^0.428.0",
     "radix-vue": "^1.9.4",
     "tailwind-merge": "^2.5.2",
-    "tailwindcss-animate": "^1.0.7",
     "vue": "^3.4.34"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.23.2",
+    "@iconify-json/carbon": "^1.1.37",
     "@types/node": "^20.14.12",
     "@unocss/eslint-config": "^0.61.5",
     "eslint": "^9.7.0",
