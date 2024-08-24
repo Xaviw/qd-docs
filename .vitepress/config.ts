@@ -9,6 +9,11 @@ export default defineConfig({
   description: '技术文档',
   lang: 'zh-cn',
   srcDir: 'src',
+  base: '/qd-docs/',
+  srcExclude: [
+    '**/(README).md',
+    '(.vitepress|public|images|.guthub)/**/*.md',
+  ],
   vite: {
     plugins: [
       // 根据目录结构自动生成 nav 与 sidebar
