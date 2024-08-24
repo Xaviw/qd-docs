@@ -1,0 +1,53 @@
+name: 部署到GithubPages
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码到打包环境中
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: 安装PNPM
+        uses: pnpm/action-setup@v2
+      - name: 安装Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          cache: pnpm
+      - name: 启用Github Pages并读取文档元数据
+        uses: actions/configure-pages@v3
+      - name: 安装依赖
+        run: pnpm install
+      - name: 打包
+        run: pnpm build
+      - name: 上传项目
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: .vitepress/dist
+
+  # 部署流程
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: 部署到 GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
